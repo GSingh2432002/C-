@@ -66,16 +66,26 @@ int main(){
 #include<bits/stdc++.h>
 using namespace std;
 
+// This line defines a function "func1" that takes an integer n as an argument. The function will return an integer value.
 int func1(int n){
+    // This is the base condition of the recursive function. If n equals 0, the function returns 0 and stops further recursion. This prevents the recursion from continuing indefinitely.
     if(n == 0){
         return 0;
     }
+
+    // This line is where the recursion happens. The function calls itself with the argument n-1 and adds the value of n to the result of that recursive call. This process continues until n reaches 0.
     return n + func1(n-1);
 }
 
+// This is the main function where the execution of the program begins
 int main(){
+    // The program reads an integer n from the user input using cin
     int n;
     cin>>n;
+
+    // This line calls the "func1" function with the input n and prints the results using cout
     cout<<func1(n)<<endl;
+
+    // The main function returns 0, indicating successful program execution
     return 0;
 }
